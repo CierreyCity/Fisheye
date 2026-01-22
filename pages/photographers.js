@@ -25,12 +25,12 @@ export async function displayImages(medias) {
   const photographerIdFromUrl = await getPhotographerIdFromURL();
   const imageSection = document.getElementById("media_section");
   const filteredMedia = medias.filter(
-    (obj) => obj.photographerId == photographerIdFromUrl
+    (obj) => obj.photographerId == photographerIdFromUrl,
   );
   filteredMedia.forEach((media) => {
     const mediaModel = mediaTemplate(media);
     const mediaCardDOM = mediaModel.getMediaCardDOM(
-      filteredMedia.indexOf(media)
+      filteredMedia.indexOf(media),
     ); // Utiliser filteredMedia.indexOf(media) pour obtenir l'index
     imageSection.appendChild(mediaCardDOM);
   });
