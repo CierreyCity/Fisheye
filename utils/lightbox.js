@@ -8,3 +8,4 @@ function openLightbox(index) {
   const src = allMedias[index].getAttribute("src");
   let fileName = src.split("/").pop().split(".")[0];
   fileName = fileName.replace(/_/g, " ");
+}
